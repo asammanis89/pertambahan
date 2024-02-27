@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>MainActivity.kt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+MainActivity.kt</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">id.ti2b.pnm.apppertambahan</span>
+
+<span class="s1">import android.health.connect.datatypes.units.Length</span>
+<span class="s1">import androidx.appcompat.app.AppCompatActivity</span>
+<span class="s1">import android.os.Bundle</span>
+<span class="s1">import android.widget.Toast</span>
+<span class="s1">import id.ti2b.pnm.apppertambahan.databinding.ActivityMainBinding</span>
+
+<span class="s0">class </span><span class="s1">MainActivity : AppCompatActivity() {</span>
+    <span class="s1">private lateinit </span><span class="s0">var </span><span class="s1">main: ActivityMainBinding</span>
+    <span class="s1">override </span><span class="s0">fun </span><span class="s1">onCreate(savedInstanceState: Bundle?) {</span>
+        <span class="s0">super</span><span class="s1">.onCreate(savedInstanceState)</span>
+        <span class="s1">main = ActivityMainBinding.inflate(layoutInflater)</span>
+        <span class="s0">val </span><span class="s1">view = main.root</span>
+        <span class="s1">setContentView(view)</span>
+
+        <span class="s0">val </span><span class="s1">input1 = main.input1</span>
+        <span class="s0">val </span><span class="s1">input2 = main.input2</span>
+        <span class="s0">val </span><span class="s1">TAMBAH = main.TAMBAH</span>
+        <span class="s0">val </span><span class="s1">KURANG = main.KURANG</span>
+        <span class="s0">val </span><span class="s1">BAGI = main.BAGI</span>
+        <span class="s0">val </span><span class="s1">KALI = main.KALI</span>
+        <span class="s0">val </span><span class="s1">HASIL = main.HASIL</span>
+
+        <span class="s1">TAMBAH.setOnClickListener{</span>
+            <span class="s0">var </span><span class="s1">nilai1 = input1.text.toString()</span>
+            <span class="s0">var </span><span class="s1">nilai2 = input2.text.toString()</span>
+            <span class="s0">var </span><span class="s1">total = Integer.parseInt(nilai1) + Integer.parseInt(nilai2)</span>
+            <span class="s1">HASIL.text = total.toString()</span>
+            <span class="s1">Toast.makeText(</span><span class="s0">this, </span><span class="s1">nilai1</span><span class="s0">, </span><span class="s1">Toast.LENGTH_SHORT).show()</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+<span class="s1">}</span></pre>
+</body>
+</html>
